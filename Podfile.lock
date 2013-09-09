@@ -1,0 +1,26 @@
+PODS:
+  - pjsip (2.1.0-2):
+    - pjsip/pjlib
+    - pjsip/pjlib_util
+    - pjsip/pjmedia
+    - pjsip/pjnath
+    - pjsip/pjsip
+    - pjsip/third_party
+  - pjsip/pjlib (2.1.0-2)
+  - pjsip/pjlib_util (2.1.0-2)
+  - pjsip/pjmedia (2.1.0-2)
+  - pjsip/pjnath (2.1.0-2)
+  - pjsip/pjsip (2.1.0-2)
+  - pjsip/third_party (2.1.0-2)
+
+DEPENDENCIES:
+  - pjsip (from `https://github.com/AmoebaConsulting/pjsip.git`)
+
+EXTERNAL SOURCES:
+  pjsip:
+    :git: https://github.com/AmoebaConsulting/pjsip.git
+
+SPEC CHECKSUMS:
+  pjsip: 9e1805eefb7233a9b9058b57aa91f93ac4da586d
+
+COCOAPODS: 0.24.0

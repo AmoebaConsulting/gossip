@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094CAE6058F04C59A8802FDF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D793BDE8D4446E089437FC4 /* libPods.a */; };
 		221BED7F15B0310000464679 /* GSECodecsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221BED7E15B0310000464679 /* GSECodecsViewController.m */; };
 		221BED8315B0338F00464679 /* GSCodecInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 221BED8115B0338F00464679 /* GSCodecInfo.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		221BED8415B0338F00464679 /* GSCodecInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 221BED8215B0338F00464679 /* GSCodecInfo.m */; };
@@ -55,7 +56,6 @@
 		226F92B215DB9D260013A997 /* ringtone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 22C0F0F115D52676006947BC /* ringtone.wav */; };
 		227D1BC7161ADE2D003247EB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 227D1BC6161ADE2D003247EB /* Default-568h@2x.png */; };
 		227F444015E23004007C364C /* GSAccount+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 227F443E15E23004007C364C /* GSAccount+Private.h */; };
-		22ABC40815C7F50F001C7985 /* libg729codec-arm-apple-darwin10.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22ABC3F415C7F50F001C7985 /* libg729codec-arm-apple-darwin10.a */; };
 		22ABC40915C7F50F001C7985 /* libg7221codec-arm-apple-darwin10.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22ABC3F515C7F50F001C7985 /* libg7221codec-arm-apple-darwin10.a */; };
 		22ABC40A15C7F50F001C7985 /* libgsmcodec-arm-apple-darwin10.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22ABC3F615C7F50F001C7985 /* libgsmcodec-arm-apple-darwin10.a */; };
 		22ABC40B15C7F50F001C7985 /* libilbccodec-arm-apple-darwin10.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22ABC3F715C7F50F001C7985 /* libilbccodec-arm-apple-darwin10.a */; };
@@ -146,7 +146,6 @@
 		226F92AF15DB9CB00013A997 /* GSRingback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRingback.m; sourceTree = "<group>"; };
 		227D1BC6161ADE2D003247EB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		227F443E15E23004007C364C /* GSAccount+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GSAccount+Private.h"; sourceTree = "<group>"; };
-		22ABC3F415C7F50F001C7985 /* libg729codec-arm-apple-darwin10.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libg729codec-arm-apple-darwin10.a"; path = "pjsip/lib/libg729codec-arm-apple-darwin10.a"; sourceTree = "<group>"; };
 		22ABC3F515C7F50F001C7985 /* libg7221codec-arm-apple-darwin10.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libg7221codec-arm-apple-darwin10.a"; path = "pjsip/lib/libg7221codec-arm-apple-darwin10.a"; sourceTree = "<group>"; };
 		22ABC3F615C7F50F001C7985 /* libgsmcodec-arm-apple-darwin10.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libgsmcodec-arm-apple-darwin10.a"; path = "pjsip/lib/libgsmcodec-arm-apple-darwin10.a"; sourceTree = "<group>"; };
 		22ABC3F715C7F50F001C7985 /* libilbccodec-arm-apple-darwin10.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libilbccodec-arm-apple-darwin10.a"; path = "pjsip/lib/libilbccodec-arm-apple-darwin10.a"; sourceTree = "<group>"; };
@@ -186,6 +185,8 @@
 		22D43D9215AACD680099C79F /* GSECallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSECallViewController.h; sourceTree = "<group>"; };
 		22D43D9315AACD680099C79F /* GSECallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSECallViewController.m; sourceTree = "<group>"; };
 		22D43D9515AACFAD0099C79F /* GSECallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSECallViewController.xib; sourceTree = "<group>"; };
+		6D793BDE8D4446E089437FC4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1D681E6A8447D995EF3930 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +219,6 @@
 				224AFFF615A6E9E200CC5890 /* CoreVideo.framework in Frameworks */,
 				2242FB8B15A6D8A500B34D4F /* CoreAudio.framework in Frameworks */,
 				22AD824715A5987C0000D05C /* Foundation.framework in Frameworks */,
-				22ABC40815C7F50F001C7985 /* libg729codec-arm-apple-darwin10.a in Frameworks */,
 				22ABC40915C7F50F001C7985 /* libg7221codec-arm-apple-darwin10.a in Frameworks */,
 				22ABC40A15C7F50F001C7985 /* libgsmcodec-arm-apple-darwin10.a in Frameworks */,
 				22ABC40B15C7F50F001C7985 /* libilbccodec-arm-apple-darwin10.a in Frameworks */,
@@ -238,6 +238,7 @@
 				22ABC41915C7F50F001C7985 /* libresample-arm-apple-darwin10.a in Frameworks */,
 				22ABC41A15C7F50F001C7985 /* libspeex-arm-apple-darwin10.a in Frameworks */,
 				22ABC41B15C7F50F001C7985 /* libsrtp-arm-apple-darwin10.a in Frameworks */,
+				094CAE6058F04C59A8802FDF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +314,7 @@
 				22AD824515A5987C0000D05C /* Frameworks */,
 				22AD824815A5987C0000D05C /* Gossip */,
 				22AD824415A5987C0000D05C /* Products */,
+				DD1D681E6A8447D995EF3930 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -336,6 +338,7 @@
 				224AFFED15A6E9AB00CC5890 /* CoreVideo.framework */,
 				22AD824615A5987C0000D05C /* Foundation.framework */,
 				22AD826415A59F7D0000D05C /* PJSIP */,
+				6D793BDE8D4446E089437FC4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -376,7 +379,6 @@
 			isa = PBXGroup;
 			children = (
 				22ABC3F515C7F50F001C7985 /* libg7221codec-arm-apple-darwin10.a */,
-				22ABC3F415C7F50F001C7985 /* libg729codec-arm-apple-darwin10.a */,
 				22ABC3F615C7F50F001C7985 /* libgsmcodec-arm-apple-darwin10.a */,
 				22ABC3F715C7F50F001C7985 /* libilbccodec-arm-apple-darwin10.a */,
 				22ABC3F815C7F50F001C7985 /* libmilenage-arm-apple-darwin10.a */,
@@ -453,9 +455,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22AD825015A5987C0000D05C /* Build configuration list for PBXNativeTarget "Gossip" */;
 			buildPhases = (
+				9FFFB37958E0471BA4ED794F /* Check Pods Manifest.lock */,
 				22AD823F15A5987C0000D05C /* Sources */,
 				22AD824015A5987C0000D05C /* Frameworks */,
 				22AD824115A5987C0000D05C /* Headers */,
+				EAE666ABFDC744A9B6A2F31D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -508,6 +512,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9FFFB37958E0471BA4ED794F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAE666ABFDC744A9B6A2F31D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		224EFF8815A6D27600CD541C /* Sources */ = {
@@ -577,7 +614,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/pjsip/lib\"",
 					"\"$(SRCROOT)/pjsip\"",
-					"\"$(SRCROOT)/pjsip/g729\"",
 					"\"$(SRCROOT)/pjsip/source/third_party/lib\"",
 				);
 				OTHER_LDFLAGS = "";
@@ -597,7 +633,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/pjsip/lib\"",
 					"\"$(SRCROOT)/pjsip\"",
-					"\"$(SRCROOT)/pjsip/g729\"",
 					"\"$(SRCROOT)/pjsip/source/third_party/lib\"",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -611,7 +646,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -650,7 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = armv7;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
@@ -674,11 +709,13 @@
 		};
 		22AD825115A5987C0000D05C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1D681E6A8447D995EF3930 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Gossip.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(SRCROOT)/pjsip/source/pjlib/include",
 					"$(SRCROOT)/pjsip/source/pjlib-util/include",
 					"$(SRCROOT)/pjsip/source/pjmedia/include",
@@ -694,7 +731,10 @@
 					"\"$(SRCROOT)/pjsip/lib\"",
 					"\"$(SRCROOT)/pjsip\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -702,16 +742,35 @@
 		};
 		22AD825215A5987C0000D05C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1D681E6A8447D995EF3930 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/Gossip.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/pjsip\"",
+					"\"${PODS_ROOT}/Headers/pjsip/pjlib-util/include\"",
+					"\"${PODS_ROOT}/Headers/pjsip/pjlib/include\"",
+					"\"${PODS_ROOT}/Headers/pjsip/pjmedia/include\"",
+					"\"${PODS_ROOT}/Headers/pjsip/pjnath/include\"",
+					"\"${PODS_ROOT}/Headers/pjsip/pjsip/include\"",
+					"$(PODS_ROOT)/pjsip/pjproject-2.1.0/pjlib/include",
+					"$(PODS_ROOT)/pjsip/pjproject-2.1.0/pjlib-util/include",
+					"$(PODS_ROOT)/pjsip/pjproject-2.1.0/pjmedia/include",
+					"$(PODS_ROOT)/pjsip/pjproject-2.1.0/pjnath/include",
+					"$(PODS_ROOT)/pjsip/pjproject-2.1.0/pjsip/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/pjsip/lib\"",
 					"\"$(SRCROOT)/pjsip\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

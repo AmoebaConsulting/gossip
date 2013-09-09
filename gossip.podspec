@@ -25,7 +25,6 @@ Pod::Spec.new do |s|
   # s.library   = 'iconv'
   # s.libraries = 'iconv', 'xml2'
   s.libraries =
-    "libg729codec-arm-apple-darwin10.a",
     "libg7221codec-arm-apple-darwin10.a",
     "libgsmcodec-arm-apple-darwin10.a",
     "libilbccodec-arm-apple-darwin10.a",
@@ -64,7 +63,6 @@ Pod::Spec.new do |s|
       "$(inherited)",
       "$(SRCROOT)/pjsip/lib",
       "$(SRCROOT)/pjsip",
-      "$(SRCROOT)/pjsip/g729",
       "$(SRCROOT)/pjsip/source/third_party/lib",
     ],
   }
