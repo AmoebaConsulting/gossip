@@ -1,0 +1,98 @@
+#!/bin/bash
+
+# A script to compile for iOS device.
+
+pushd . > /dev/null
+cd source
+
+# clean pjsip folder
+echo ""
+echo In directory: `pwd`
+
+git clean -xdn
+
+echo ""
+echo "Will do inside the pjsip source folder:"
+echo "    GIT CLEAN -XDF"
+echo "    GIT RESET --hard HEAD"
+echo ""
+echo "CTRL+C to cancel now or be _VERY_ sure you want to proceed by pressing any key."
+echo ""
+read
+
+# Always run the following from inside the pjsip source/ folder
+compile_for () {
+	COMPILE_ARCH=${1}
+
+	echo "### Building for ${COMPILE_ARCH}..."
+	make distclean > /dev/null 2>&1
+	export ARCH="-arch ${COMPILE_ARCH}"
+
+	echo "  * Resetting pjsip source"
+	git clean -xdf > /dev/null 2>&1
+	git reset --hard HEAD > /dev/null 2>&1
+
+	if [ "${COMPILE_ARCH}" = "i386" ]; then
+		echo "  * Enabling simulator support"
+		export DEVPATH=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer
+		export CFLAGS="-O2 -m32 -miphoneos-version-min=6.0"
+
+		# NOTE: The following variables' default value are auto-configured at runtime. No need to set.
+		# export LDFLAGS="-O2 -m32"
+		# export CC=/Applications/Xcode.app/Contents/Developer/usr/bin # this breaks C compiler
+	fi
+
+	# apply G729 patch and copy all needed stuff into PJSIP source tree.
+	echo "  * Patching for g729 support"
+	git apply --stat ../g729/enable_g729.patch > /dev/null
+	git apply ../g729/enable_g729.patch > /dev/null
+	cp -i ../g729/g729a_include/*.h third_party/
+	cp ../g729/pj_g729.h third_party/
+	cp ../g729/pj_g729.c pjmedia/src/pjmedia-codec/g729.c # so it compiles as part of pjsip
+
+	mkdir -p third_party/lib
+	cp ../g729/libg729a.a third_party/lib/libg729codec-arm-apple-darwin10.a
+
+	# ... and build
+	echo "  * Configuring pjsip"
+	./configure-iphone > ../configure.log 2>&1
+	echo "  * Building deps (see make-dep.log)"
+	make dep > ../make-dep.log 2>&1
+	make clean > /dev/null
+	echo "  * Building (see make.log)"
+	make > ../make.log 2>&1
+
+	# Copy all libs files from various folders inside PJSIP sources to lib-arch/
+	echo "  * Copying compiled libs to lib-${COMPILE_ARCH}"
+	mkdir -p ../lib-${COMPILE_ARCH}
+	for x in `find . | grep "\.a$"`
+	do
+		cp ./$x ../lib-${COMPILE_ARCH}
+	done
+}
+
+compile_for armv7
+compile_for armv7s
+compile_for i386
+
+popd > /dev/null
+
+echo "### Making universal libs..."
+mkdir -p ./lib
+for x in `find lib-armv7 | grep "\.a$"`
+do
+	file=`basename $x`
+
+	if [ "${file}" = "libg729codec-arm-apple-darwin10.a" ]; then
+		# The g729 codec is already fat
+		cp lib-armv7/${file} lib/${file}
+	else
+		xcrun -sdk iphoneos lipo -arch i386   lib-i386/${file} \
+								 -arch armv7  lib-armv7/${file} \
+								 -arch armv7s lib-armv7s/${file} \
+								 -create -output lib/${file}
+	fi
+done
+
+./show-info
+

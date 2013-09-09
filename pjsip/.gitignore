@@ -3,3 +3,6 @@
 configure.log
 make-dep.log
 make.log
+
+# Temporary lib folders for each arch
+lib-*
