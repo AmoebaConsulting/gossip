@@ -42,16 +42,16 @@ compile_for () {
 		# export CC=/Applications/Xcode.app/Contents/Developer/usr/bin # this breaks C compiler
 	fi
 
-	# apply G729 patch and copy all needed stuff into PJSIP source tree.
-	echo "  * Patching for g729 support"
-	git apply --stat ../g729/enable_g729.patch > /dev/null
-	git apply ../g729/enable_g729.patch > /dev/null
-	cp -i ../g729/g729a_include/*.h third_party/
-	cp ../g729/pj_g729.h third_party/
-	cp ../g729/pj_g729.c pjmedia/src/pjmedia-codec/g729.c # so it compiles as part of pjsip
+	# # apply G729 patch and copy all needed stuff into PJSIP source tree.
+	# echo "  * Patching for g729 support"
+	# git apply --stat ../g729/enable_g729.patch > /dev/null
+	# git apply ../g729/enable_g729.patch > /dev/null
+	# cp -i ../g729/g729a_include/*.h third_party/
+	# cp ../g729/pj_g729.h third_party/
+	# cp ../g729/pj_g729.c pjmedia/src/pjmedia-codec/g729.c # so it compiles as part of pjsip
 
-	mkdir -p third_party/lib
-	cp ../g729/libg729a.a third_party/lib/libg729codec-arm-apple-darwin10.a
+	# mkdir -p third_party/lib
+	# cp ../g729/libg729a.a third_party/lib/libg729codec-arm-apple-darwin10.a
 
 	# ... and build
 	echo "  * Configuring pjsip"
