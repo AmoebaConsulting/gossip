@@ -7,7 +7,7 @@
 #
 Pod::Spec.new do |s|
   s.name         = "gossip"
-  s.version      = "0.1.0-1"
+  s.version      = "0.1.0-2"
   s.summary      = "A SIP client library that wraps PJSIP into a nice and clean OO api."
   s.homepage     = "https://github.com/chakrit/gossip"
   s.license      = { :type => 'Public Domain', :file => 'LICENSE.md' }
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Gossip/*.{m,h}'
 
-  s.dependency 'pjsip', :git => "https://github.com/AmoebaConsulting/pjsip.git"
+  s.dependency 'pjsip', "2.1.0-2"
 end
